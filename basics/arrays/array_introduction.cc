@@ -12,19 +12,22 @@ int main() {
 	 *
 	 * */
 
-	int amount, value;
-	int array_numbers[] = {};
-
+	int amount, value, counter;
 	std::cout<<"Amount:"; std::cin>>amount;
-	
-	while (amount >= 0){
-		
+	int array_numbers[amount];
+	int index;
+	while (amount > 0){
+		index = amount -1;
 		std::cin>>value;
-		std::cout<<"i="<<amount<<"value="<<value;
-		array_numbers[amount-1] = value;
+		array_numbers[index] = value;
+		std::cout <<"index="<<index<<"value="<<value<< std::endl;
 		amount -= 1;
 	}
 	
-	printf("%d", array_numbers[0]);
+	std::cout<<"print items: "<<array_numbers[0];
+	for(int i=0; i<amount; i++){
+		std::cout<< array_numbers[i];
+	}
+
 	return 0;
 }
