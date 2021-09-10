@@ -13,7 +13,7 @@
 
 int main() {
 	int a;  // 'a' variable
-	int* x;  // Declaring a pointer, *x is a pointer
+	int *x;  // Declaring a pointer, *x is a pointer
 	return 0;
 }
 ```
@@ -27,7 +27,7 @@ int main() {
 
 int main() {
 	int a;
-	int* x;
+	int *x;
 
 	a = 4;  // assigning 4 to 'a' variable
 	x = &a;  // referencing the memory address of 'a' 
