@@ -17,7 +17,7 @@ int main() {
 
 ### Referencing
 
->> Referencing means taking the address of an existing variable (using `&`) to set a pointer variable. In order to be valid, a pointer has tobe set to the address of a variable of the same type as the pointer, without the asterick.
+> Referencing means taking the address of an existing variable (using `&`) to set a pointer variable. In order to be valid, a pointer has tobe set to the address of a variable of the same type as the pointer, without the asterick.
 
 - https://stackoverflow.com/questions/14224831/meaning-of-referencing-and-dereferencing-in-c
 
@@ -33,8 +33,11 @@ int main() {
 	
 	std::cout << a << std::endl;  // 4
 	std::cout << x << std::endl;  // 0x7ffc965e759c
-	std::cout << *x << std::endl;  // 4
-
+		
 	return 0;
 }
 ```
+
+### Dereferencing
+
+> 
