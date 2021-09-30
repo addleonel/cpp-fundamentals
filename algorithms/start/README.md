@@ -19,4 +19,4 @@ $$\sum_{k=1}^{n} k^2 = 1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}$$
 $$\sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \cdots + n^3 = \left[\frac{n(n+1)}{2}\right]^2$$
 ```
 
-
+<img src="https://latex.codecogs.com/svg.image?a_{n}&space;=&space;a_{1}&space;&plus;&space;\(n&space;-&space;1\)r" title="a_{n} = a_{1} + \(n - 1\)r" />
