@@ -70,3 +70,30 @@ $$f(n) = f(n-1) + f(n-2)$$
 ```latex
 $$f(n) = \frac{(1+\sqrt{5})^n-(1-\sqrt{5})^n}{2^n\sqrt{5}}$$
 ```
+
+### Logarithms
+
+<img src="https://latex.codecogs.com/svg.image?\log_{k}{ab}&space;=&space;\log_{k}{a}&space;&plus;&space;\log_{k}{b}" title="\log_{k}{ab} = \log_{k}{a} + \log_{k}{b}" />
+
+```latex
+$$\log_{k}{ab} = \log_{k}{a} + \log_{k}{b}$$
+```
+
+<img src="https://latex.codecogs.com/svg.image?\log_{k}{\frac{a}{b}}&space;=&space;\log_{k}{a}&space;-&space;\log_{k}{b}" title="\log_{k}{\frac{a}{b}} = \log_{k}{a} - \log_{k}{b}" />
+
+```latex
+$$\log_{k}{\frac{a}{b}} = \log_{k}{a} - \log_{k}{b}$$
+```
+
+<img src="https://latex.codecogs.com/svg.image?\log_{k}{a^n}&space;=&space;n&space;\log_{k}{a}" title="\log_{k}{a^n} = n \log_{k}{a}" />
+
+```latex
+$$\log_{k}{a^n} = n \log_{k}{a}$$
+```
+
+<img src="https://latex.codecogs.com/svg.image?\log_{u}{x}&space;=&space;\frac{\log_{k}{x}}{\log_{k}{u}}" title="\log_{u}{x} = \frac{\log_{k}{x}}{\log_{k}{u}}" />
+
+```latex
+$$\log_{u}{x} = \frac{\log_{k}{x}}{\log_{k}{u}}$$
+```
+
