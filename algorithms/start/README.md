@@ -18,5 +18,55 @@ $$\sum_{k=1}^{n} k^2 = 1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}$$
 ```latex
 $$\sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \cdots + n^3 = \left[\frac{n(n+1)}{2}\right]^2$$
 ```
+### Arithmetic progression
 
-<img src="https://latex.codecogs.com/svg.image?a_{n}&space;=&space;a_{1}&space;&plus;&space;\(n&space;-&space;1\)r" title="a_{n} = a_{1} + \(n - 1\)r" />
+<img src="https://latex.codecogs.com/svg.image?a_{n}&space;=&space;a_{1}&space;&plus;&space;(n&space;-&space;1)d" title="a_{n} = a_{1} + (n - 1)d" />
+
+```latex
+$$a_{n} = a_{1} + (n - 1)d$$
+```
+
+<img src="https://latex.codecogs.com/svg.image?s_{n}&space;=&space;(\frac{a_{1}&space;&plus;&space;a_{n}}{2})n" title="s_{n} = (\frac{a_{1} + a_{n}}{2})n" />
+
+```latex
+$$s_{n} = (\frac{a_{1} + a_{n}}{2})n$$
+```
+
+### Geometric progression
+<img src="https://latex.codecogs.com/svg.image?t_{n}&space;=&space;t_{1}r^{n-1}" title="t_{n} = t_{1}r^{n-1}" />
+
+```latex
+$$t_{n} = t_{1}r^{n-1}$$
+```
+
+<img src="https://latex.codecogs.com/svg.image?s_{n}&space;=&space;\frac{t_{1}(r^n&space;-&space;1)}{r&space;-1}" title="s_{n} = \frac{t_{1}(r^n - 1)}{r -1}" />
+
+```latex
+$$s_{n} = \frac{t_{1}(r^n - 1)}{r -1}$$
+```
+
+### Factorial
+
+<img src="https://latex.codecogs.com/svg.image?\prod_{i=1}^{n}&space;i&space;=&space;1&space;\cdot&space;2&space;\cdot&space;3&space;\cdot&space;...&space;\cdot&space;n" title="\prod_{i=1}^{n} i = 1 \cdot 2 \cdot 3 \cdot ... \cdot n" />
+
+```latex
+$$\prod_{i=1}^{n} i = 1 \cdot 2 \cdot 3 \cdot ... \cdot n$$
+```
+
+### Fibonacci
+<img src="https://latex.codecogs.com/svg.image?f(0)&space;=&space;0" title="f(0) = 0" />
+
+<img src="https://latex.codecogs.com/svg.image?f(1)&space;=&space;1" title="f(1) = 1" />
+<img src="https://latex.codecogs.com/svg.image?f(n)&space;=&space;f(n-1)&space;&plus;&space;f(n-2)" title="f(n) = f(n-1) + f(n-2)" />
+
+```latex
+$$f(0) = 0$$
+$$f(1) = 1$$
+$$f(n) = f(n-1) + f(n-2)$$
+```
+
+<img src="https://latex.codecogs.com/svg.image?f(n)&space;=&space;\frac{(1&plus;\sqrt{5})^n-(1-\sqrt{5})^n}{2^n\sqrt{5}}" title="f(n) = \frac{(1+\sqrt{5})^n-(1-\sqrt{5})^n}{2^n\sqrt{5}}" />
+
+```latex
+$$f(n) = \frac{(1+\sqrt{5})^n-(1-\sqrt{5})^n}{2^n\sqrt{5}}$$
+```
