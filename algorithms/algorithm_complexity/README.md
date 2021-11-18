@@ -7,8 +7,11 @@
 
 - https://www.youtube.com/watch?v=O5LiA5ireA4
 - https://www.youtube.com/watch?v=JBm5OXbReQE
-- https://devopedia.org/algorithmic-complexity#:~:text=Algorithmic%20complexity%20is%20a%20measure,for%20large%20values%20of%20n.&text=Algorithmic%20complexity%20is%20also%20called%20complexity%20or%20running%20time.
+- https://devopedia.org/algorithmic-complexity
+
 
 ## Big O notation
 
 - https://www.youtube.com/watch?v=HEISXs0wYlM
+
+![](https://devopedia.org/images/article/17/4996.1513922020.jpg)
