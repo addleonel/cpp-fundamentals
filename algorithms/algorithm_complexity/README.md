@@ -21,6 +21,12 @@
 ![](https://devopedia.org/images/article/17/4996.1513922020.jpg)
 ![](https://i.ytimg.com/vi/47GRtdHOKMg/maxresdefault.jpg)
 
+**Simplification**
+
+=> **O(n + n^2) = O(n) + O(n^2) = O(n^2)**
+=> **O(n + log n) = O(n) + O(log n) = O(n)**
+=> **O(5 * 2^n + n^100) = O(5 * 2^n) + O(n^100) = O(2^n)**
+
 ### O(1) - Constant
 
 ```python
@@ -29,6 +35,8 @@ x = 5                               # O(1)
 if message == 'Hi':                 # O(1)
 	print('Hi!, How are you?')  # O(1)
 ```
+
+=> **O(1) + O(1) + O(1) + O(1) = O(1)**
 
 ### O(log n) - Logarithmic 
 
@@ -40,11 +48,15 @@ if message == 'Hi':                 # O(1)
 
 ```python 
 def multiply(arr):
-	answer = 1
+	answer = 1              # O(1)
 	for item in arr:        # O(n)
-		answer *= item
-	return answer
+		answer *= item  # O(1)
+	return answer		# O(1)
 ```
+
+=> **O(1) + O(n) + O(1) + O(1) = O(n)**
+
+
 ### O(n log n) - Linearithmic
 
 - https://www.educative.io/edpresso/nlogn-sorting-algorithms
@@ -54,14 +66,16 @@ def multiply(arr):
 
 - https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/
 
-```
+```python
 def multiply_matrix_elements(arr):
-	answer = 1
+	answer = 1                             # O(1)
 	for i in range(len(arr)):              # O(n)
 		for j in range(len(arr))       # O(n^2)
-			answer *= arr[i][j]
-	return answer
+			answer *= arr[i][j]    # O(1)
+	return answer                          # O(1)
 ```
+
+=> **O(1) + O(n) + O(n^2) + O(1) + O(1) = O(n^2)**
 
 ### O(2^n) and O(k^n) - Exponential
 
