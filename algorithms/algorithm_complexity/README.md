@@ -24,7 +24,9 @@
 **Simplification**
 
 => **O(n + n^2) = O(n) + O(n^2) = O(n^2)**
+
 => **O(n + log n) = O(n) + O(log n) = O(n)**
+
 => **O(5 * 2^n + n^100) = O(5 * 2^n) + O(n^100) = O(2^n)**
 
 ### O(1) - Constant
