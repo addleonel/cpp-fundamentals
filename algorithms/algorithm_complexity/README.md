@@ -13,6 +13,7 @@
 
 ## Big O notation
 
+- https://www.youtube.com/watch?v=uHjPTUpQOAk
 - https://www.youtube.com/watch?v=MyAiCtuhiqQ
 - https://www.youtube.com/watch?v=HEISXs0wYlM
 - https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/
@@ -56,7 +57,7 @@ def multiply(arr):
 	return answer		# O(1)
 ```
 
-=> **O(1) + O(n) + O(1) + O(1) = O(n)**
+=> **O(1) + O(n) * O(1) + O(1) = O(n)**
 
 
 ### O(n log n) - Linearithmic
@@ -70,23 +71,26 @@ def multiply(arr):
 
 ```python
 def multiply_matrix_elements(arr):
+	n = len(arr)                           # O(1) 
 	answer = 1                             # O(1)
-	for i in range(len(arr)):              # O(n)
-		for j in range(len(arr))       # O(n^2)
+	for i in range(n)):                    # O(n)
+		for j in range(n):             # O(n*n) = O(n^2)
 			answer *= arr[i][j]    # O(1)
 	return answer                          # O(1)
 ```
 
-=> **O(1) + O(n) + O(n^2) + O(1) + O(1) = O(n^2)**
+=> **O(1) + O(1) + O(n) + O(n^2) * O(1) + O(1) = O(n^2)**
+
+
 
 ### O(n^3) - Cube and O(n^k) - Polynomial
 
 ```javascript
 const cube = (n) => {
-    for (let i=0; i<n; i++) {
-        for (let j=0; j<n; j++) {
-            for (let k=0; k<n; k++) {
-                console.log(`x=${i}, y=${j}, z=${k}`);
+    for (let i=0; i<n; i++) {                           // O(n)
+        for (let j=0; j<n; j++) {                       // O(n*n) = O(n^2)
+            for (let k=0; k<n; k++) {                   // O(n*n*n) = O(n^3)
+                console.log(`x=${i}, y=${j}, z=${k}`);  // O(1)
             }
         }
     }
@@ -95,6 +99,7 @@ cube(4);
 
 ```
 
+=> **O(n) + O(n^2) + O(n^3) * O(1) = O(n^3)**
 
 ### O(2^n) and O(k^n) - Exponential
 
