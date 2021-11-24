@@ -75,7 +75,7 @@ def multiply(arr):
 def multiply_matrix_elements(arr):
 	n = len(arr)                           # O(1) 
 	answer = 1                             # O(1)
-	for i in range(n)):                    # O(n)
+	for i in range(n):                    # O(n)
 		for j in range(n):             # O(n*n) = O(n^2)
 			answer *= arr[i][j]    # O(1)
 	return answer                          # O(1)
