@@ -79,6 +79,23 @@ def multiply_matrix_elements(arr):
 
 => **O(1) + O(n) + O(n^2) + O(1) + O(1) = O(n^2)**
 
+### O(n^3) - Cube and O(n^k) - Polynomial
+
+```javascript
+const cube = (n) => {
+    for (let i=0; i<n; i++) {
+        for (let j=0; j<n; j++) {
+            for (let k=0; k<n; k++) {
+                console.log(`x=${i}, y=${j}, z=${k}`);
+            }
+        }
+    }
+}
+cube(4);
+
+```
+
+
 ### O(2^n) and O(k^n) - Exponential
 
 - https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/#O-2-n-Exponential-time
