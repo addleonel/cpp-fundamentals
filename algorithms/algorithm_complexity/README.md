@@ -15,7 +15,9 @@
 
 - https://www.youtube.com/watch?v=uHjPTUpQOAk
 - https://www.youtube.com/watch?v=MyAiCtuhiqQ
-- https://www.youtube.com/watch?v=HEISXs0wYlM
+- https://www.youtube.com/watch?v=HEISXs0wYlM![cube](https://user-images.githubusercontent.com/62483482/143323028-a63ad621-2888-496c-a6a4-1eb2625beb80.png)![cube](https://user-images.githubusercontent.com/62483482/143323089-e2dc6a78-906a-4a53-a648-72f64f409912.png)
+
+
 - https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/
 - https://developerinsider.co/big-o-notation-explained-with-examples/
 
@@ -100,6 +102,8 @@ cube(4);
 ```
 
 => **O(n) + O(n^2) + O(n^3) * O(1) = O(n^3)**
+
+![](https://github.com/addleonel/cpp-fundamentals/blob/main/images/cube.png)
 
 ### O(2^n) and O(k^n) - Exponential
 
