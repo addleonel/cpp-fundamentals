@@ -27,7 +27,7 @@ To this:
 ```
 
 ## O(n^2)  Algorithms
-- **Bubble Sort:** Bubble sort consists of n rounds. On each round, the algorithm iterates
+- **[Bubble Sort:](https://github.com/addleonel/cpp-fundamentals/blob/main/algorithms/sorting/bubble_sort.cc)** Bubble sort consists of n rounds. On each round, the algorithm iterates
 through the elements of the array. Whenever two consecutive elements are found
 that are not in correct order, the algorithm swaps them. The algorithm can be
 implemented as follows: 
@@ -48,7 +48,10 @@ void bubbleSort(int arr[], int n)
     }
 }
 ```
+<<<<<<< HEAD
 ## O(n log n) Algorithms
 - **Merge Sort:** Merge sort is a divide and conquer algorithm. It divides the array into
 two halves, calls itself for the two halves and then merges the two sorted halves.
 The merge() function is used for merging the two halves.
+=======
+>>>>>>> 87dbc7879ccdfedb027feb8a25dc23b55e79b673
