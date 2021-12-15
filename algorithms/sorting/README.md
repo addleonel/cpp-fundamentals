@@ -48,3 +48,7 @@ void bubbleSort(int arr[], int n)
     }
 }
 ```
+## O(n log n) Algorithms
+- **Merge Sort:** Merge sort is a divide and conquer algorithm. It divides the array into
+two halves, calls itself for the two halves and then merges the two sorted halves.
+The merge() function is used for merging the two halves.
