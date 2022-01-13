@@ -1,119 +1,209 @@
 #include <iostream>
-class Student {
+#include <vector>
+class Person {
 	// There are three access specifiers: private, protected, and public
-
-    int age, standard;  // by default are private attributes
+    int id = 0;  // by default are private attributes
 
 	private:
-        /*
-        A private member cannot be accessed, or even viewed, from outside the class; 
-		it can be accessed only from within the class.
-        */
-		std::string first_name, last_name;
+        
+        // A private member cannot be accessed, or even viewed, from outside the class; it can be accessed only from within the class.
+        std::string username;
+        std::string email;
+        std::string password;
+        
+
     protected:
-        /*
-        A protected member cannot be accessed from outside the class, however, they can be accessed in inherited classes. 
-        */
-        std::string level;
+
+        // A protected member cannot be accessed from outside the class, however, they can be accessed in inherited classes. 
+        std::string birthdate;
 
 	public:
-        /*
-        A public member is accessible from outside the class, and anywhere within the scope of the class object.
-        */
+        
+        // A public member is accessible from outside the class, and anywhere within the scope of the class object.
+        std::string firstName;
+        std::string lastName;
+        std::string gender;
+        int age;
 
         // These are contructor methods
-        Student(int age, std::string fname, std::string lname, int standard) {
-            set_age(age);
-            set_first_name(fname);
-            set_last_name(lname);
-            set_standard(standard);
+        explicit Person(std::string uname, std::string email, std::string password) {
+            setId();
+            setUsername(uname);
+            setEmail(email);
+            setPassword(password);    
         }
 
-        Student(int age, std::string fname, std::string lname) {
-            set_age(age);
-            set_first_name(fname);
-            set_last_name(lname);
+        Person(std::string uname, std::string email, std::string password, std::string fname) {
+            setId();
+            setUsername(uname);
+            setEmail(email);
+            setPassword(password);
+            firstName = fname;
         }
 
-        Student(int age, std::string fname) {
-            set_age(age);
-            set_first_name(fname);
+        Person(std::string uname, std::string email, std::string password, std::string fname, std::string lname) {
+            setId();
+            setUsername(uname);
+            setEmail(email);
+            setPassword(password);
+            firstName = fname;
+            lastName = lname;
         }
 
-        Student(int age);  // constructor declaration
+        Person(std::string uname, std::string email, std::string password, std::string fname, std::string lname, std::string gen) {
+            setId();
+            setUsername(uname);
+            setEmail(email);
+            setPassword(password);
+            firstName = fname;
+            lastName = lname;
+            gender = gen;
+        }
+
+        Person(std::string uname, std::string email, std::string password, std::string fname, std::string lname, std::string gen, int age_);  // constructor declaration
 
         //  getters and setters
-		void set_age(int age_) {
-			age= age_;
-		}
-		int get_age() {return age;}
-		
-		void set_first_name(std::string first_name_) {
-			first_name = first_name_;
-		}
-		std::string get_first_name() {return first_name;}
+        void setId() {
+            id = rand() % 100 + 1;
+        }
+        int getId() { return id;}
 
-		void set_last_name(std::string last_name_) {
-			last_name = last_name_;
-		}
-		std::string get_last_name() {return last_name;}
+        void setUsername(std::string username_) {
+            username = username_;
+        }
+        std::string getUsername() { return username;}
 
-		void set_standard(int standard_) {
-			standard = standard_;
-		}
-		int get_standard() {return standard;}
+        void setEmail(std::string email_) {
+            email = email_;
+        }
+        std::string getEmail() { return email;}
 
+        void setPassword(std::string password_) {
+            password = password_;
+        }
+        std::string getPassword() { return password;}
         // instance methods
-		void print_data() {
+		void printData() {
+            if (getId() != 0)
+                std::cout << "Id: " << getId() << "\n";
+            if (getUsername() != "")
+                std::cout << "Username: " << getUsername() << "\n";
+            if (firstName != "")
+                std::cout << "FirstName: " << firstName << "\n";
+            if (lastName != "")
+                std::cout << "LastName: " << lastName << "\n";
+            if (gender != "")
+                std::cout << "Gender: " << gender << "\n";
             if (age)
                 std::cout << "Age: " << age << "\n";
-            if (first_name != "")
-                std::cout << "FirstName: " << first_name << "\n";
-            if (last_name != "")
-                std::cout << "LastName: " << last_name << "\n";
-            if (standard)
-			    std::cout <<  "Standard: " << standard << "\n";
 		}
 
         // method declaration
-        void concat(std::string word=" ");
+        void concat(std::string word=", ");
 };
 
 // We can define method outside the class (method definition)
-Student::Student(int age){
-    set_age(age);
+Person::Person(std::string uname, std::string email, std::string password, std::string fname, std::string lname, std::string gen, int age_) {
+    setId();
+    setUsername(uname);
+    setEmail(email);
+    setPassword(password);
+    firstName = fname;
+    lastName = lname;
+    gender = gen;
+    age = age_;
 }
 
-void Student::concat(std::string word) {
+void Person::concat(std::string word) {
+    if (getId() != 0)
+        std::cout << getId() << word;
+    if (getUsername() != "")
+        std::cout << getUsername() << word;
+    if (firstName != "")
+        std::cout << firstName << word;
+    if (lastName != "")
+        std::cout << lastName << word;
+    if (gender != "")
+        std::cout << gender << word;
     if (age)
         std::cout << age << word;
-    if (first_name != "")
-        std::cout << first_name << word;
-    if (last_name != "")
-        std::cout << last_name << word;
-    if (standard)
-        std::cout << standard << "\n";
 }
 
+// Student (is a subclass)
+class Student: public Person {
+    public:
+        using Person::Person;
+        std::vector<std::string> courses;
+        void printCourses();
+        void printData();
+};
+
+void Student::printCourses() {
+    std::cout << "My Courses: \n";
+    for (auto course: courses) {
+        std::cout << course << ", ";
+    }
+}
+
+void Student::printData() {
+    std::cout << "Id: " << getId() << "\n";
+    if (getUsername() != "")
+        std::cout << "Username: " << getUsername() << "\n";
+    if (firstName != "")
+        std::cout << "FirstName: " << firstName << "\n";
+    if (lastName != "")
+        std::cout << "LastName: " << lastName << "\n";
+    if (gender != "")
+        std::cout << "Gender: " << gender << "\n";
+    if (age)
+        std::cout << "Age: " << age << "\n";
+    printCourses();
+    std::cout << "\n";
+}
+
+// Teacher (is a subclass)
+class Teacher: public Person {
+    public:
+        using Person:: Person;
+        
+        std::string material;
+        void printData();
+};
+
+void Teacher::printData() {
+        std::cout << "Id: " << getId() << "\n";
+        if (getUsername() != "")
+            std::cout << "Username: " << getUsername() << "\n";
+        if (firstName != "")
+            std::cout << "FirstName: " << firstName << "\n";
+        if (lastName != "")
+            std::cout << "LastName: " << lastName << "\n";
+        if (gender != "")
+            std::cout << "Gender: " << gender << "\n";
+        if (age)
+            std::cout << "Age: " << age << "\n";
+        if (material != "")
+            std::cout << "Material: " << material << "\n";
+}
 
 
 int main () {
-	int age, standard;
-	std::string first_name, last_name;
-	
-    age = 22;
-    standard = 10;
-    first_name = "Leonel";
-    last_name = "Aquino";
+	std::string username, email, password;
+    
+    username = "addleonel";
+    email = "example@example.io";
+    password = "examplepassword";
 
-	Student you(age, first_name, last_name, standard);
-    Student you_age(age);
+	Student you(username, email, password, "Leonel", "", "Male", 22);
+    you.courses.push_back("Math");
+    you.courses.push_back("Data structure and Algorithms");
 
-	you.print_data();
+	you.printData();
     you.concat(", ");
-    // std::cout << you.level << "\n";
-    you_age.print_data();
 
+    Teacher mathTeacher("john23", "john123@example.com", "john123", "John", "Cooper", "Male", 46);
+    mathTeacher.material = "Mathematics";
+    mathTeacher.printData();
     
 	return 0;
 }
