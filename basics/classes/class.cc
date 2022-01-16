@@ -136,8 +136,19 @@ class Student: public Person {
     public:
     	using Person::Person;
         std::vector<std::string> courses;
+        std::vector<double> marks;
         void printCourses();
         void printData();
+
+        // static method
+        static double calculateAverageMarks(Student student) {
+            if (student.marks.size() == 0) return 0;
+            double totalMark;
+            for (auto mark : student.marks) {
+                totalMark += mark;
+            }
+            return totalMark/student.marks.size();
+        }
 };
 
 void Student::printCourses() {
@@ -217,6 +228,17 @@ class TeacherAssistant: public StudentGraduate, public Teacher {
 
 };
 
+
+void compareAverageTwoStudentMarks(Student std1, Student std2) {
+    if (Student::calculateAverageMarks(std1) > Student::calculateAverageMarks(std2)) {
+        std::cout << "Student " << std1.getUsername() << " is greater than student " << std2.getUsername() << "\n";
+    }
+    else {
+        std::cout << "Student " << std2.getUsername() << " is greater than student " << std1.getUsername() << "\n";
+    }
+}
+
+
 int main () {
 	std::string username, email, password;
     
@@ -227,7 +249,19 @@ int main () {
 	Student you(username, email, password, "Leonel", "", "Male", 22);
     you.courses.push_back("Math");
     you.courses.push_back("Data structure and Algorithms");
+    you.marks.push_back(12);
+    you.marks.push_back(32.23);
+    you.marks.push_back(32.59);
+    double markAverage = you.calculateAverageMarks(you);
+    std::cout << "Your mark average is: " << std::to_string(markAverage) << "\n";
 
+    Student she("sersi", "sersi@exmaple.com", "sersi123", "Sersi", "", "Female", 29);
+    she.marks.push_back(12);
+    she.marks.push_back(20);
+    std::cout << "Her averge mark is: " << std::to_string(Student::calculateAverageMarks(she)) << "\n";
+
+    compareAverageTwoStudentMarks(you, she);
+    
 	you.printData();
     you.concat(", ");
 
