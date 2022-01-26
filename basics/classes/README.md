@@ -4,3 +4,4 @@
 - https://en.wikipedia.org/wiki/Complex_number
 - https://stackoverflow.com/questions/1943276/what-does-do-in-a-c-declaration
 - https://www.geeksforgeeks.org/operator-overloading-c/
+- https://docs.microsoft.com/en-us/cpp/standard-library/overloading-the-output-operator-for-your-own-classes?view=msvc-170
