@@ -14,14 +14,14 @@
 ### Compilers
 |Compiler|Platform|Command|
 |--------|--------|-------|
-|**[GCC](https://gcc.gnu.org/) (GNU Compiler Collection)** This is most used for C | Linux | `gcc file.c -o file.out` |
-|**[G++](https://gcc.gnu.org/)** This is appropiated for c++ | Linux | `g++ file.cc -o file.out` |
+|**[GCC](https://gcc.gnu.org/) (GNU Compiler Collection)** this is most used for C | Linux | `gcc file.c -o file.out` |
+|**[G++](https://gcc.gnu.org/)** this is appropriated for c++ | Linux | `g++ file.cc -o file.out` |
 
 #### How compilers work
 
-source code -> compiler -> Machine Language
+`source code -> compiler -> Machine Language`
 
-From the following source code (called HelloWorld.cpp)
+From the following source code (called helloWorld.cpp)
 
 ```cpp
 #include <iostream>
@@ -32,13 +32,13 @@ int main() {
     return 0;
 }
 ```
-We need to compile
+We need to compile (`g++` helps us to do this)
 
 ```
-g++ HelloWorld -o helloWorld
+g++ helloWorld.cpp -o helloWorld
 ```
 
-Above create a executable file (in this case "helloWorld"). To run this we need to execute the file as following:
+Above create an executable file (in this case `helloWorld`). To run this we need to execute the file as follows:
 
 ````
 ./helloWorld
