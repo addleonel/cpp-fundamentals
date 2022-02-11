@@ -1,6 +1,6 @@
 ## C++ Fundamentals
 
-> C++ is a general-propose programming language, is considered as "C" with classes. C++ has object-oriented, generic, functional features in addition to facilities for low-level memory manipulation.
+> C++ is a general-purpose programming language, is considered as "C" with classes. C++ has object-oriented, generic, functional features in addition to facilities for low-level memory manipulation.
 
 ### IDEs and Code Editors for C++
 - code::Blocks
@@ -40,9 +40,10 @@ g++ helloWorld.cpp -o helloWorld
 
 Above create an executable file (in this case `helloWorld`). To run this we need to execute the file as follows:
 
-````
+```
 ./helloWorld
 ```
+
 This prints in console `Hello World`
 
 
