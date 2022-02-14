@@ -1,10 +1,4 @@
 ## Pointers
-- https://www.cplusplus.com/doc/tutorial/pointers/
-- https://www.programiz.com/cpp-programming/pointers
-- https://www.guru99.com/cpp-pointers.html
-- https://stackoverflow.com/questions/14224831/meaning-of-referencing-and-dereferencing-in-c
-- https://www.codingunit.com/cplusplus-tutorial-pointers-reference-and-dereference-operators
-- https://en.wikipedia.org/wiki/Dereference_operator
 
 ### How to declare an pointer?
 
@@ -65,3 +59,12 @@ int main() {
 	return 0;
 }
 ```
+
+### Sources:
+
+- https://www.cplusplus.com/doc/tutorial/pointers/
+- https://www.programiz.com/cpp-programming/pointers
+- https://www.guru99.com/cpp-pointers.html
+- https://stackoverflow.com/questions/14224831/meaning-of-referencing-and-dereferencing-in-c
+- https://www.codingunit.com/cplusplus-tutorial-pointers-reference-and-dereference-operators
+- https://en.wikipedia.org/wiki/Dereference_operator
