@@ -16,6 +16,7 @@
 |--------|--------|-------|
 |**[GCC](https://gcc.gnu.org/) (GNU Compiler Collection)** this is most used for C | Linux | `gcc file.c -o file.out` |
 |**[G++](https://gcc.gnu.org/)** this is appropriated for c++ | Linux | `g++ file.cc -o file.out` |
+|**[Microsoft Visual C++ (MSVC) compiler](https://code.visualstudio.com/docs/cpp/config-msvc)**| Microsoft | `cl file.cc`|
 
 #### How compilers work
 
