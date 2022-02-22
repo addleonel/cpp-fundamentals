@@ -14,21 +14,21 @@ class Complex {
 			return Complex(re + other.re, im + other.im);	
 		}
 
-    Complex operator += (const Complex &other) {
-        re +=other.re;
-        im += other.im;
-        return Complex(re, im);
-    }
+        Complex operator += (const Complex &other) {
+            re +=other.re;
+            im += other.im;
+            return Complex(re, im);
+        }
 
-    Complex operator - (const Complex &other) {
-        return Complex(re - other.re, im - other.im);
-    }
+        Complex operator - (const Complex &other) {
+            return Complex(re - other.re, im - other.im);
+        }
 
-    Complex operator -= (const Complex &other) {
-        re -= other.re;
-        im -= other.im;
-        return Complex(re, im);
-    }
+        Complex operator -= (const Complex &other) {
+            re -= other.re;
+            im -= other.im;
+            return Complex(re, im);
+        }
 
 		Complex operator * (const Complex &other) {
 			float nre = re*other.re - im*other.im;
@@ -42,7 +42,7 @@ class Complex {
 			return Complex(nre, nim);
 		}
 
-    Complex sqrt_() {
+        Complex sqrt_() {
 			return Complex(pow(re, 2) - pow(im, 2), 2*re*im);
 		}
 		
@@ -66,13 +66,14 @@ std::string Complex::str() {
 int main () {
     Complex c1(12, 20);
     Complex c2(12.5, 10);
-
+    
     Complex c3 = c1 + c2;
     Complex c4 = c1 - c2;
     Complex c5 = c1 * c2;
     Complex c6 = c1 / c2;
     c1 -= c1;
     std::cout << &c1 << "\n";
+    std::cout << c1.str() << "\n";
     std::cout << c3.str() << "\n";
     std::cout << c4.str() << "\n";
     std::cout << c5.str() << "\n";
